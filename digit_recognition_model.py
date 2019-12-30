@@ -88,7 +88,7 @@ optimizer = RMSprop(lr=0.0001, rho=0.9, epsilon=1e-08, decay=0.0)
 model.compile(optimizer = optimizer , loss = "categorical_crossentropy", metrics=["accuracy"])
 
 
-epochs = 30 # Turn epochs to 30 to get 0.9967 accuracy
+epochs = 35 # Turn epochs to 30 to get 0.9967 accuracy
 batch_size = 64
 
 datagen = ImageDataGenerator(
