@@ -111,8 +111,6 @@ datagen.fit(x_train)
 history = model.fit_generator(datagen.flow(x_train,y_train, batch_size=batch_size),
                               epochs = epochs, validation_data=(x_test, y_test),
                               verbose = 2, steps_per_epoch=x_train.shape[0] // batch_size)
-# Fit the model
-#history = model.fit(x_train, y_train, epochs = 20, batch_size = 128, validation_data=(x_test, y_test), verbose = 1)
 
 valid_accuracy = history.history['val_acc']
 model_json = model.to_json()
